@@ -1,0 +1,130 @@
+/* ========== [ ESTILO GLOBAL / BASE DA PÁGINA ] ========== */
+body {
+  margin: 0; /* Remove margens padrão do navegador */
+  font-family: Arial, sans-serif; /* Define a fonte padrão */
+  background-color: #f4f4f4; /* Fundo cinza claro */
+  color: #333; /* Cor de texto padrão (cinza escuro) */
+}
+
+/* ========== [ CABEÇALHO / HEADER ] ========== */
+header { 
+  background-color: #c4170c; /* Vermelho escuro */
+  color: rgb(250, 250, 250); /* Texto branco suave */
+  padding: 20px; /* Espaçamento interno */
+}
+
+header h1 {
+  margin: 0; /* Remove margens do título principal */
+}
+
+/* ========== [ MENU DE NAVEGAÇÃO ] ========== */
+nav ul {
+  list-style: none; /* Remove os marcadores da lista */
+  padding: 0; /* Remove o espaçamento interno */
+  display: flex; /* Exibe os itens na horizontal */
+  flex-wrap: wrap; /* Quebra linha em telas menores */
+  gap: 15px; /* Espaço entre os itens */
+  margin-top: 10px; /* Espaço acima do menu */
+}
+
+nav a {
+  color: white; /* Cor dos links */
+  text-decoration: none; /* Remove sublinhado */
+  font-weight: bold; /* Negrito nos links */
+}
+
+/* ========== [ CARROSSEL DE IMAGENS ] ========== */
+#carrossel {
+  position: relative; /* Necessário para posicionamento dos botões */
+  overflow: hidden; /* Esconde partes fora da tela */
+}
+
+.carousel {
+  display: flex; /* Coloca as imagens em linha */
+  transition: transform 0.5s ease-in-out; /* Animação suave de transição */
+  width: 300%; /* Largura total para múltiplas imagens */
+}
+
+.carousel img {
+  width: 100vw; /* Largura igual à largura da tela */
+  height: 400px; /* Altura fixa */
+  object-fit: cover; /* Imagem cobre toda a área sem distorcer */
+}
+
+#carrossel button {
+  position: absolute; /* Posiciona sobre a imagem */
+  top: 50%; /* Alinha verticalmente */
+  transform: translateY(-50%); /* Centraliza verticalmente */
+  background-color: rgba(0,0,0,0.5); /* Fundo preto semitransparente */
+  color: white; /* Cor do ícone/texto */
+  border: none; /* Sem bordas */
+  font-size: 2rem; /* Tamanho grande */
+  padding: 10px; /* Espaço interno */
+  cursor: pointer; /* Muda o cursor ao passar por cima */
+  z-index: 1; /* Garante que fique acima das imagens */
+}
+
+#anterior {
+  left: 10px; /* Posiciona na esquerda */
+}
+
+#proximo {
+  right: 10px; /* Posiciona na direita */
+}
+
+/* ========== [ CONTEÚDO PRINCIPAL / MAIN ] ========== */
+main {
+  padding: 20px; /* Espaçamento interno */
+  max-width: 1200px; /* Largura máxima */
+  margin: auto; /* Centraliza na página */
+}
+
+/* ========== [ SEÇÕES DE CONTEÚDO ] ========== */
+section {
+  margin-bottom: 40px; /* Espaço entre seções */
+  background: rgb(245, 243, 243); /* Fundo branco acinzentado */
+  padding: 20px; /* Espaço interno */
+  border-radius: 5px; /* Arredonda cantos */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra leve */
+}
+
+/* ========== [ TÍTULOS ] ========== */
+h1 {
+  color: #060505; /* Preto quase puro para títulos */
+}
+
+/* ========== [ ARTIGOS / POSTS ] ========== */
+article {
+  margin-bottom: 20px; /* Espaço inferior entre artigos */
+}
+
+article img {
+  width: 100%; /* Largura total */
+  border-radius: 5px; /* Cantos arredondados */
+  margin-top: 10px; /* Espaço acima da imagem */
+}
+
+/* ========== [ FORMULÁRIO DE CONTATO / COMENTÁRIOS ] ========== */
+form textarea {
+  width: 100%; /* Largura total */
+  height: 100px; /* Altura da área de texto */
+  padding: 10px; /* Espaçamento interno */
+  margin-bottom: 10px; /* Espaço abaixo do campo */
+  resize: none; /* Impede redimensionamento manual */
+}
+
+form button {
+  background-color: #c4170c; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  border: none; /* Remove borda */
+  padding: 10px 20px; /* Espaçamento interno */
+  cursor: pointer; /* Cursor do tipo botão */
+}
+
+/* ========== [ RODAPÉ / FOOTER ] ========== */
+footer {
+  background-color: #222; /* Fundo escuro */
+  color: white; /* Texto branco */
+  text-align: center; /* Centraliza o texto */
+  padding: 15px; /* Espaçamento interno */
+}
