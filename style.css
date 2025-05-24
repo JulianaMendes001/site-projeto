@@ -1,9 +1,11 @@
 /* ========== [ ESTILO GLOBAL / BASE DA PÁGINA ] ========== */
 body {
+  font-size: 17px;
   margin: 0; /* Remove margens padrão do navegador */
   font-family: Arial, sans-serif; /* Define a fonte padrão */
   background-color: #f4f4f4; /* Fundo cinza claro */
   color: #333; /* Cor de texto padrão (cinza escuro) */
+  text-align: justify;
 }
 
 /* ========== [ CABEÇALHO / HEADER ] ========== */
@@ -39,16 +41,27 @@ nav a {
   overflow: hidden; /* Esconde partes fora da tela */
 }
 
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+}
+
 .carousel {
   display: flex; /* Coloca as imagens em linha */
   transition: transform 0.5s ease-in-out; /* Animação suave de transição */
-  width: 300%; /* Largura total para múltiplas imagens */
+  width: 300vw; /* Largura total para múltiplas imagens */
 }
 
 .carousel img {
-  width: 100vw; /* Largura igual à largura da tela */
+ width: 100vw; /* Largura igual à largura da tela */
   height: 400px; /* Altura fixa */
   object-fit: cover; /* Imagem cobre toda a área sem distorcer */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 #carrossel button {
@@ -91,6 +104,17 @@ section {
 /* ========== [ TÍTULOS ] ========== */
 h1 {
   color: #060505; /* Preto quase puro para títulos */
+  font-size: 18px;
+  text-align: center;
+}
+h2 {
+  text-align: 
+}
+
+del {
+  text-decoration: line-through;
+  text-decoration-color: rgba(238, 12, 12, 0.712);
+  color: inherit;
 }
 
 /* ========== [ ARTIGOS / POSTS ] ========== */

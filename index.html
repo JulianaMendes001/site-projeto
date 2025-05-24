@@ -8,123 +8,42 @@
   <!-- Título da aba do navegador -->
   <title>TechNews - Portal de Notícias Tecnológicas</title>
   <!-- Link para o arquivo CSS -->
-  <link rel="stylesheet" href="styles.css" />
-  <!-- Link para o arquivo JavaScript com defer para garantir que o DOM esteja carregado antes da execução -->
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script><!-- Link para o arquivo JavaScript com defer para garantir que o DOM esteja carregado antes da execução -->
 </head>
 <body>
 
   <!-- Cabeçalho do site com o título e o menu de navegação -->
   <header>
-    <h1>TechNews</h1>
+    <h1><strong>InfoTech</strong></h1>
     <nav>
       <ul>
         <!-- Links de navegação interna para as seções do site -->
-        <li><a href="#destaques">Destaques</a></li>
-        <li><a href="#hardware">Hardware</a></li>
-        <li><a href="#software">Software</a></li>
-        <li><a href="#ia">IA</a></li>
-        <li><a href="#games">Games</a></li>
-        <li><a href="#startups">Startups</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><a href="destaques.html">Destaques</a></li>
+        <li><a href="hardware.html">Hardware</a></li>
+        <li><a href="software.html">Software</a></li>
+        <li><a href="ia.html">IA</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="startups.html">Startups</a></li>
+        <li><a href="contato.html">Contato</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Seção do carrossel de imagens com botões de navegação -->
-  <section id="carrossel">
-    <button id="anterior">&#10094;</button> <!-- Botão para slide anterior -->
+  <div id="carrossel" class="carousel-container">
+    <button id="anterior">&#10094; </button> <!-- Botão para slide anterior -->
     <div class="carousel">
       <!-- Imagens rotativas do carrossel -->
       <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80" alt="Tecnologia de ponta">
       <img src="https://ravel.com.br/blog/wp-content/uploads/2023/02/Tendencias-de-tecnologia-2023-Capa.jpg" alt="Robótica e IA">
       <img src="https://ascenty.com/wp-content/uploads/2022/04/tecnologia-na-educação-1920x1000-c-default.png" alt="Programação e código">
     </div>
-    <button id="proximo">&#10095;</button> <!-- Botão para próximo slide -->
-  </section>
+    <button id="proximo">&#10095; </button> <!-- Botão para próximo slide -->
+    </div>
 
   <!-- Seção com notícias de games -->
-  <section id="games">
-    <h1>Games</h1>
-
-    <!-- Artigo sobre GTA 6 -->
-    <article>
-      <h2>ANUNCIO DO GRAND THEFT AUTO VI</h2>
-      <p>Em 26 de maio de 2026, o mundo dos videogames será transformado com o lançamento de Grand Theft Auto VI (GTA 6). Desenvolvido pela Rockstar Games, este título promete redefinir os padrões da indústria, oferecendo uma experiência imersiva e inovadora que ultrapassa os limites do entretenimento digital...</p> 
-      <p>
-        Pela primeira vez na franquia, GTA 6 apresenta uma protagonista feminina jogável: Lucia Caminos. Ela se une a Jason Duval em uma trama que mistura ação e drama, com elementos inspirados em Bonnie e Clyde. O segundo trailer revelou cenas que sugerem uma narrativa complexa, com possíveis traições e alianças inesperadas, mantendo os jogadores ansiosos por cada reviravolta. <br>
-        Ambientado no estado fictício de Leonida, inspirado na Flórida, GTA 6 expande o universo de Vice City, oferecendo uma metrópole vibrante e cheia de vida. O mapa inclui áreas urbanas densas, zonas rurais e pântanos, proporcionando uma diversidade de ambientes que enriquecem a exploração e a jogabilidade .
-      </p>
-      <img src="https://forbes.com.br/wp-content/uploads/2023/12/GTA-6-4.png" alt="GTA 6" /> 
-      <h3>Referências à Vida Real: Humor e Crítica Social</h3>
-      <p>
-        A Rockstar é conhecida por sua sátira social, e GTA 6 não é exceção. O trailer apresenta cenas que fazem referência a acontecimentos reais da Flórida, como a "Senhora dos Martelos" e o "Florida Man", trazendo humor e crítica à cultura contemporânea. <br>
-GTA 6 é descrito como "a propriedade de entretenimento mais aguardada de todos os tempos" pelo CEO da Take-Two Interactive, Strauss Zelnick . O impacto cultural do jogo é inegável, com fãs e críticos aguardando ansiosamente por seu lançamento. A Rockstar Games demonstrou mais uma vez sua habilidade em criar experiências que transcendem o mundo dos jogos, estabelecendo novos padrões para a indústria.
-      </p>
-<p>
-  Grand Theft Auto VI não é apenas uma sequência; é uma revolução no mundo dos videogames. Com um mundo expansivo, personagens profundos e uma narrativa envolvente, GTA 6 promete ser uma experiência inesquecível que marcará uma nova era no entretenimento digital. Prepare-se para embarcar na jornada mais ambiciosa da Rockstar Games.
-</p>
-    </article>
-
-    <!-- Artigo sobre Doom Slayer -->
-    <article>
-      <h2>DOOM SLAYER DARK AGE</h2>
-      <p>
-        DOOM: The Dark Ages, lançado em 15 de maio de 2025, é a oitava entrada principal na franquia DOOM e serve como uma prequela dos aclamados DOOM (2016) e DOOM Eternal (2020). Desenvolvido pela id Software e publicado pela Bethesda Softworks, o jogo transporta os jogadores para uma era medieval sombria, onde o Doom Slayer enfrenta as forças do Inferno em uma batalha épica pela sobrevivência da humanidade.
-      </p>
-      <h3> Ambientação e História:</h3>
-      <p>
-        Situado muitos anos antes dos eventos dos jogos anteriores, The Dark Ages explora as origens do Doom Slayer e sua aliança com os Sentinelas Noturnos de Argent D'Nur e os misteriosos Maykrs. A narrativa é enriquecida com cutscenes cinematográficas que aprofundam o personagem e o universo, oferecendo uma experiência mais imersiva e detalhada. <br>
-        Diferente dos títulos anteriores, que enfatizavam combate rápido e acrobático, The Dark Ages adota uma abordagem mais pesada e estratégica. O Doom Slayer é retratado como um "tanque de ferro", com mecânicas de combate mais lentas e ponderadas. A introdução da Serraescudo permite bloquear, parry e atacar em um único movimento, enquanto o novo sistema de Execuções Gloriosas aprimorado oferece maior controle durante os combates 
-      </p>
-      <img src="https://images.greenmangaming.com/7f9a5dfbe11d4ecb8d90401df30d216a/289ff5f5dee848ca83a0255953da2ec8.jpg" alt="Console Nintendo" />
-      <p>
-        O arsenal do jogo é vasto e inclui armas clássicas como a Superescopeta, além de novas adições como o Skull Crusher, que dispara fragmentos ósseos nos inimigos. Também estão disponíveis armas de combate corpo a corpo, como um gauntlet, um mace de ferro e uma flail, essenciais para enfrentar inimigos fortemente blindados ou em grupos. <br>
-        Os jogadores podem aprimorar o desempenho do Doom Slayer por meio de upgrades estratégicos em armas, escudos e ferramentas de combate corpo a corpo. O jogo apresenta dois tipos de upgrades: 
-        <li><b>Upgrades de atributos</b>, que requerem <b>Essência Demoníaca</b> para melhorar munição, saúde e armadura.</li>
-        <li><b>Upgrades de equipamentos</b>, acessíveis por meio de <b>Santuários Sentinelas</b>, que utilizam <b> Ouro, Rubis e Pedras Espectrais</b></li>
-        </p> 
-        <p> Além disso, o jogo apresenta skins de pesadelo colecionáveis, que oferecem melhorias visuais para as armas, embora não afetem o desempenho. Essas skins estão espalhadas pelos níveis e podem ser encontradas com a ajuda de mapas e dicas.
-      </p>
-      <h3>Edições Especiais e Conteúdo Adicional:</h3>
-      <p>
-        Para os entusiastas, DOOM: The Dark Ages oferece várias edições especiais:
-        <li><b>Edição Premium</b>: Inclui o jogo base, acesso antecipado de dois dias, trilha sonora digital, livro de arte digital e visuais exclusivos para o Slayer, Dragão e Atlan.</li>
-        <li><b>Pacote de Colecionador</b>: Além dos itens da Edição Premium, oferece uma estátua do Doom Slayer de 30 cm com armas e capa removíveis, réplica de credencial de metal e embalagem SteelBook.</li>
-      </p>
-      <h3>Disponibilidade e Requisitos:</h3>
-      <p>
-        DOOM: The Dark Ages está disponível para PlayStation 5, Xbox Series X/S e PC. Para os jogadores de PC, os requisitos mínimos incluem:
-        <li><b>Sistema Operacional</b>: Windows 10/11 64-bit</li>
-        <li><b>Processador</b>: AMD Ryzen 7 3700X ou Intel Core i7 10700K</li>
-        <li><b>Placa de Vídeo</b>: NVIDIA RTX 2060 Super ou AMD RX 6600 com 8GB de VRAM</li>
-        <li><b>Memória RAM</b>: 16GB</li>
-        <li><b>Armazenamento</b>: SSD NVMe de 512GB com 100GB disponíveis.</li>
-      </p>
-      <h3> Recepção Crítica:</h3>
-      <p>
-        O jogo recebeu críticas geralmente positivas, sendo considerado um forte candidato a Jogo do Ano. A crítica destaca a combinação de combate intenso, narrativa envolvente e design de níveis impressionante. A introdução de novas mecânicas, como o uso de veículos como o <b>Mechadragão</b> e o <b>Atlan Mech</b> de 30 andares, adiciona variedade e profundidade à experiência de jogo.
-      </p>
-    </article>
-
-    <!-- Artigo sobre eSports -->
-    <article>
-      <h2>eSPORTS CRESCEM EM POPULARIDADE GLOBALMENTE</h2>
-      <p>
-        Os <b>eSports</b>, ou esportes eletrônicos, têm se consolidado como um dos setores que mais crescem na indústria do entretenimento. De torneios internacionais com milhões de dólares em prêmios a transmissões ao vivo que rivalizam com eventos esportivos tradicionais, o cenário competitivo dos videogames atrai cada vez mais fãs, patrocinadores e investimentos.
-      </p>
-      <p>
-        Em países como <b>Coreia do Sul, Estados Unidos, Brasil e China</b>, os eSports já são tratados com a mesma seriedade que esportes convencionais, com atletas profissionais, treinadores, psicólogos e até nutricionistas integrando as equipes. Jogos como <b> League of Legends, Counter-Strike: Global Offensive, Valorant, Dota 2 e Fortnite</b> lideram os rankings de audiência.
-      </p>
-      <img src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80" alt="eSports" />
-      <p>
-        Segundo relatórios da <b>Newzoo e Statista</b>, o público global dos eSports ultrapassou <b> 500 milhões de pessoas</b> em 2024, com expectativa de crescimento contínuo nos próximos anos. Além disso, grandes marcas como <b>Coca-Cola, Nike e Red Bull</b> investem fortemente no setor, enxergando um público jovem e altamente engajado.
-      </p>
-      <p>
-        Outro fator impulsionador é o avanço das plataformas de streaming como <b>Twitch, YouTube Gaming e Kick</b>, que permitem que jogadores e fãs se conectem de forma instantânea, criando comunidades ativas e influentes.Com o crescimento contínuo, é possível que os eSports sejam incluídos em mais eventos esportivos internacionais — como já ocorreu nas <b> Olimpíadas Asiáticas</b>. O futuro aponta para uma integração ainda maior entre tecnologia, competição e entretenimento digital.
-      </p>
-    </article>
-  </section>
+  
 
   <!-- Conteúdo principal -->
   <main>
@@ -150,7 +69,7 @@ GTA 6 é descrito como "a propriedade de entretenimento mais aguardada de todos 
 
   <!-- Rodapé com direitos autorais -->
   <footer>
-    <p>&copy; 2025 TechNews. Todos os direitos reservados.</p>
+    <p>&copy; 2025 InfoTech. Todos os direitos reservados.</p>
   </footer>
 
 </body>

@@ -9,7 +9,7 @@ let index = 0;
 
 // Função que atualiza a posição do carrossel com base no slide atual
 function updateCarousel() {
-  carousel.style.transform = translateX(-${index * 100}vw);
+  carousel.style.transform = `translateX(-${index * 100}vw)`;
 }
 
 // Define um intervalo para trocar de slide automaticamente a cada 4 segundos
@@ -40,7 +40,7 @@ function carregarComentarios() {
   lista.innerHTML = ''; // Limpa a lista atual
   comentarios.forEach(({ nome, texto }) => {
     const div = document.createElement('div');
-    div.innerHTML = <strong>${nome}:</strong> ${texto}; // Cria um elemento para cada comentário
+    div.innerHTML = `<strong>${nome}:</strong> ${texto}`; // Cria um elemento para cada comentário
     lista.appendChild(div);
   });
 }
