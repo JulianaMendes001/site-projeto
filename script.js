@@ -1,68 +1,82 @@
-// Seleciona o elemento do carrossel
-const carousel = document.querySelector('.carousel');
+// =================== CARROSSEL ===================
 
-// Conta o número total de slides dentro do carrossel
-const totalSlides = carousel.children.length;
-
-// Índice atual do slide
+// Seleciona os elementos do carrossel
+const slide = document.querySelector('.carousel-slide');
+const imagens = slide?.querySelectorAll('img') || [];
 let index = 0;
 
-// Função que atualiza a posição do carrossel com base no slide atual
-function updateCarousel() {
-  carousel.style.transform = `translateX(-${index * 100}vw)`;
+// Função que atualiza a posição do carrossel
+function mostrarSlide(i) {
+  slide.style.transform = `translateX(-${i * 100}%)`;
 }
 
-// Define um intervalo para trocar de slide automaticamente a cada 4 segundos
+// Muda de slide automaticamente a cada 4 segundos
 setInterval(() => {
-  index = (index + 1) % totalSlides; // Avança para o próximo slide, voltando ao início no final
-  updateCarousel(); // Atualiza o carrossel
+  if (imagens.length > 0) {
+    index = (index + 1) % imagens.length;
+    mostrarSlide(index);
+  }
 }, 4000);
 
-// Evento de clique no botão "próximo" para ir ao slide seguinte
-document.getElementById('proximo').addEventListener('click', () => {
-  index = (index + 1) % totalSlides;
-  updateCarousel();
+// Botão de próximo
+const btnProximo = document.getElementById('proximo-destaques');
+if (btnProximo) {
+  btnProximo.addEventListener('click', () => {
+    index = (index + 1) % imagens.length;
+    mostrarSlide(index);
+  });
+}
+
+// Botão de anterior
+const btnAnterior = document.getElementById('anterior-destaques');
+if (btnAnterior) {
+  btnAnterior.addEventListener('click', () => {
+    index = (index - 1 + imagens.length) % imagens.length;
+    mostrarSlide(index);
+  });
+}
+
+// Corrige na primeira carga da página
+window.addEventListener('load', () => {
+  if (imagens.length > 0) mostrarSlide(index);
 });
 
-// Evento de clique no botão "anterior" para voltar ao slide anterior
-document.getElementById('anterior').addEventListener('click', () => {
-  index = (index - 1 + totalSlides) % totalSlides; // Garante que o índice não fique negativo
-  updateCarousel();
-});
+// =================== COMENTÁRIOS ===================
 
-// Seleciona o formulário de comentários e a lista onde os comentários serão exibidos
 const form = document.querySelector('#form-comentario');
 const lista = document.querySelector('#lista-comentarios');
 
-// Função para carregar os comentários salvos no localStorage e exibi-los na tela
+// Carrega comentários do localStorage
 function carregarComentarios() {
-  const comentarios = JSON.parse(localStorage.getItem('comentarios')) || []; // Recupera os comentários salvos
-  lista.innerHTML = ''; // Limpa a lista atual
+  const comentarios = JSON.parse(localStorage.getItem('comentarios')) || [];
+  lista.innerHTML = '';
   comentarios.forEach(({ nome, texto }) => {
     const div = document.createElement('div');
-    div.innerHTML = `<strong>${nome}:</strong> ${texto}`; // Cria um elemento para cada comentário
+    div.innerHTML = `<strong>${nome}:</strong> ${texto}`;
     lista.appendChild(div);
   });
 }
 
-// Função para salvar um novo comentário no localStorage
+// Salva novo comentário
 function salvarComentario(nome, texto) {
   const comentarios = JSON.parse(localStorage.getItem('comentarios')) || [];
-  comentarios.push({ nome, texto }); // Adiciona o novo comentário à lista existente
-  localStorage.setItem('comentarios', JSON.stringify(comentarios)); // Salva novamente no localStorage
+  comentarios.push({ nome, texto });
+  localStorage.setItem('comentarios', JSON.stringify(comentarios));
 }
 
-// Adiciona o comportamento ao formulário para capturar o comentário enviado
-form.addEventListener('submit', function(e) {
-  e.preventDefault(); // Evita que a página seja recarregada
-  const nome = prompt('Digite seu nome:'); // Solicita o nome do usuário
-  const texto = this.querySelector('textarea').value.trim(); // Obtém o texto do comentário
-  if (texto && nome) { // Verifica se ambos foram preenchidos
-    salvarComentario(nome, texto); // Salva o comentário
-    carregarComentarios(); // Atualiza a lista de comentários exibida
-    this.querySelector('textarea').value = ''; // Limpa o campo de texto
-  }
-});
+// Envia novo comentário
+if (form) {
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const nome = prompt('Digite seu nome:');
+    const texto = this.querySelector('textarea').value.trim();
+    if (texto && nome) {
+      salvarComentario(nome, texto);
+      carregarComentarios();
+      this.querySelector('textarea').value = '';
+    }
+  });
+}
 
-// Carrega os comentários automaticamente ao carregar a página
+// Carrega comentários ao abrir a página
 carregarComentarios();

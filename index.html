@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <!-- Define a codificação de caracteres -->
   <meta charset="UTF-8" />
-  <!-- Faz o layout se adaptar a diferentes tamanhos de tela -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <!-- Título da aba do navegador -->
   <title>InfoTech - Portal de Notícias Tecnológicas</title>
-  <!-- Link para o arquivo CSS -->
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script><!-- Link para o arquivo JavaScript com defer para garantir que o DOM esteja carregado antes da execução -->
+       <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/22/22819.png" type="image/png" />
+  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
-<body>
 
-  <!-- Cabeçalho do site com o título e o menu de navegação -->
-  <header>
-    <h1><strong>InfoTech</strong></h1>
+<body>
+  <!-- Cabeçalho -->
+  <header class="topo-site">
+    <h1><a href="index.html">InfoTech</a></h1>
     <nav>
-      <ul>
-        <!-- Links de navegação interna para as seções do site -->
+      <ul class="menu">
         <li><a href="destaques.html">Destaques</a></li>
         <li><a href="hardware.html">Hardware</a></li>
         <li><a href="software.html">Software</a></li>
@@ -30,47 +27,40 @@
     </nav>
   </header>
 
-  <!-- Seção do carrossel de imagens com botões de navegação -->
-  <div id="carrossel" class="carousel-container">
-    <button id="anterior">&#10094; </button> <!-- Botão para slide anterior -->
-    <div class="carousel">
-      <!-- Imagens rotativas do carrossel -->
-      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80" alt="Tecnologia de ponta">
-      <img src="https://ravel.com.br/blog/wp-content/uploads/2023/02/Tendencias-de-tecnologia-2023-Capa.jpg" alt="Robótica e IA">
-      <img src="https://ascenty.com/wp-content/uploads/2022/04/tecnologia-na-educação-1920x1000-c-default.png" alt="Programação e código">
-    </div>
-    <button id="proximo">&#10095; </button> <!-- Botão para próximo slide -->
-    </div>
 
-  <!-- Seção com notícias de games -->
+    <!-- Apresentação -->
+  <section class="apresentacao">
+    <h2>BEM-VINDO A INFOTECH!</h2>
+    <p class="texto-apresentacao"><strong>Gosta de tecnologia?</strong> Então o InfoTech é o lugar certo pra você! <br>
+      Aqui você encontra as novidades mais legais sobre IA, hardware, software, startups, games e tudo o que tá bombando no mundo tech.</p>
   
-
-  <!-- Conteúdo principal -->
-  <main>
-
-    <!-- Seção de comentários com formulário e lista -->
-    <section id="comentarios">
-      <h2>Comentários</h2>
-      <form id="form-comentario">
-        <textarea placeholder="Deixe seu comentário..."></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-      <!-- Aqui os comentários salvos aparecerão -->
-      <div id="lista-comentarios"></div>
     </section>
+  
+    <main>
+      <section>
 
-    <!-- Seção de contato -->
-    <section id="contato">
-      <h2>Contato</h2>
-      <p>Entre em contato conosco para sugestões, parcerias ou dúvidas: 
-        <a href="mailto:contato@technews.com">contato@technews.com</a></p>
-    </section>
-  </main>
+       <h2>Destaques</h2>
+       <div class="carousel-container">
+       <div class="carousel-slide">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80" alt="Tecnologia de ponta" style= width: 100%; max-height: 400px; object-fit: cover;>
+      <img src="https://ravel.com.br/blog/wp-content/uploads/2023/02/Tendencias-de-tecnologia-2023-Capa.jpg" alt="Robótica e IA" style= width: 100%; max-height: 400px; object-fit: cover;>
+      <img src="https://ascenty.com/wp-content/uploads/2022/04/tecnologia-na-educação-1920x1000-c-default.png" alt="Programação e código" style= width: 100%; max-height: 400px; object-fit: cover;>
+      </div>
+      <button id="anterior-inicial">&#10094;</button>
+      <button id="proximo-inicial">&#10095;</button>
+    </div>
+  </section>
+ </main>
 
-  <!-- Rodapé com direitos autorais -->
+
+  <!-- Navegação -->
+  <div class="navegacao-paginas" style="justify-content: flex-end:">
+    <a href="destaques.html" class="btn-navegacao">Próxima »</a>
+  </div>
+
+  <!-- Rodapé -->
   <footer>
-    <p>&copy; 2025 InfoTech. Todos os direitos reservados.</p>
+    <p>&copy; 2025 InfoTech</p>
   </footer>
-
 </body>
 </html>

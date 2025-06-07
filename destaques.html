@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Destaques</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="topo-site">
+    <h1><a href="index.html">InfoTech</a></h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Destaques</a></li>
+        <li><a href="hardware.html">Hardware</a></li>
+        <li><a href="software.html">Software</a></li>
+        <li><a href="ia.html">IA</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="startups.html">Startups</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CARROSSEL -->
+   <br>
+<div class="carousel-container">
+  <div class="carousel-slide">
+<img src="https://images.pexels.com/photos/3405456/pexels-photo-3405456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="menino usando óculos VR" style= "width: 100%; max-height: 500px; object-fit: cover;">
+    <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Código projetado sobre a mulher" style="width: 100%; max-height: 500px; object-fit: cover;">
+    <img src="https://images.pexels.com/photos/8294650/pexels-photo-8294650.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Robô fazendo flexão" style="width: 100%; max-height: 500px; object-fit: cover;">
+  </div>
+  </div>
+
+  <button id="anterior-destaques">&#10094;</button>
+  <button id="proximo-destaques">&#10095;</button>
+</div>
+
+
+  <!-- CARDS DE DESTAQUE -->
+  <section class="grid-cards">
+    <div class="card">
+      <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg" alt="tecnologia de forma figurativa">
+      <h2>Avanços em IA</h2>
+      <p>Confira os últimos passos da Inteligência Artificial no mundo real.</p>
+      <a href="ia.html">Ver mais</a>
+    </div>
+
+    <div class="card">
+      <img src="https://images.pexels.com/photos/8294618/pexels-photo-8294618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Imagem robótica" >
+      <h2>Startups</h2>
+      <p>Conheça as startups que estão liderando a revolução tecnológica.</p>
+      <a href="startups.html">Ver mais</a>
+    </div>
+
+    <div class="card">
+      <img src="https://images.pexels.com/photos/123335/pexels-photo-123335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Mulher usando óculos vr">
+      <h2>Software Inteligente</h2>
+      <p>Descubra como softwares modernos estão transformando tarefas complexas em soluções simples e eficientes.</p>
+      <a href="software.html">Ver mais</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>InfoTech © 2025</p>
+  </footer>
+
+  <script>
+    const slide = document.querySelector('.carousel-slide');
+    const imagens = slide.querySelectorAll('img');
+    let index = 0;
+
+    function mostrarSlide(i) {
+      const largura = imagens[0].clientWidth;
+      slide.style.transform = `translateX(${-i * largura}px)`;
+    }
+
+    document.getElementById('proximo-destaques').addEventListener('click', () => {
+      index = (index + 1) % imagens.length;
+      mostrarSlide(index);
+    });
+
+    document.getElementById('anterior-destaques').addEventListener('click', () => {
+      index = (index - 1 + imagens.length) % imagens.length;
+      mostrarSlide(index);
+    });
+
+    window.addEventListener('resize', () => mostrarSlide(index));
+  </script>
+
+</body>
+</html>
